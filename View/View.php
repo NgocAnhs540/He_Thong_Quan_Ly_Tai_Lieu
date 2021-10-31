@@ -1,8 +1,8 @@
 <?php
 session_start();
-include_once '../config/connection.php';
-$sql = "SELECT * FROM upload";
-$res = mysqli_query($con, $sql) or die(mysqli_error($con));
+include('../config/connection.php');
+$sql = "SELECT * FROM `upload`";
+$res=mysqli_query($con,$sql) or die(mysqli_error($con));
 ?>
 <html>
 
@@ -27,7 +27,7 @@ $res = mysqli_query($con, $sql) or die(mysqli_error($con));
 		}
 
 		input#search {
-			width: 230px;
+			width: 30%;
 			height: 25px;
 		}
 
@@ -38,26 +38,29 @@ $res = mysqli_query($con, $sql) or die(mysqli_error($con));
 		<tr>
 			<th>Id</th>
 			<th>Name</th>
-			<th>Size</th>
-
-			<th colspan=2>Action</th>
+			<th>Size(Kb)</th>
+			<th>Times</th>
+			<th>Delete</th>
+			<th>Download</th>
 		</tr>
 		<?php
-		$i = 1;
-
+		   $sql = "SELECT * FROM upload";
+		   $result = $con->query($sql);
+        $i = 1; 
 		while ($row = mysqli_fetch_assoc($res)) {
-			echo "<tr><td>";
-			echo $i;
-			echo "</td><td>";
-			echo $row['name'];
-			echo "</td><td>";
-			echo number_format(($row['size'] / 1024), 2) . " Kb";
 			$path = ($_SESSION['type'] == 'Admin') ? "./" : "../";
+			
 			echo "
-<td><a href='" . $path . "../View/delete.php?data=" . $row['id'] . "' class='del_doc'>delete</a></td>
-<td><a href='" . $path . "../View/download.php?id=" . $row['id'] . "'>download</a></td></tr>";
-			$i++;
-		}
+			  <tr> 
+			  <td>".$i++."</td>
+			  <td>".$row['name']." </td>
+			  <td>".number_format(($row['size']/1024),2)."  </td>
+			  <td>".$row['Times']."</td>
+			 <td><a href='" . $path . "../View/delete.php?data=" . $row['id'] . "' class='del_doc'>delete</a></td>
+			<td><a href='" . $path . "../View/download.php?id=" . $row['id'] . "'>download</a></td>
+			
+			</tr>";
+			}
 		mysqli_close($con);
 		?>
 	</table>
