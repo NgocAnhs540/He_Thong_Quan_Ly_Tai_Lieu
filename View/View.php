@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once '../connection.php';
+include_once '../config/connection.php';
 $sql = "SELECT * FROM upload";
 $res = mysqli_query($con, $sql) or die(mysqli_error($con));
 ?>
@@ -54,8 +54,8 @@ $res = mysqli_query($con, $sql) or die(mysqli_error($con));
 			echo number_format(($row['size'] / 1024), 2) . " Kb";
 			$path = ($_SESSION['type'] == 'Admin') ? "./" : "../";
 			echo "
-<td><a href='" . $path . "View/delete.php?data=" . $row['id'] . "' class='del_doc'>delete</a></td>
-<td><a href='" . $path . "View/download.php?id=" . $row['id'] . "'>download</a></td></tr>";
+<td><a href='" . $path . "../View/delete.php?data=" . $row['id'] . "' class='del_doc'>delete</a></td>
+<td><a href='" . $path . "../View/download.php?id=" . $row['id'] . "'>download</a></td></tr>";
 			$i++;
 		}
 		mysqli_close($con);

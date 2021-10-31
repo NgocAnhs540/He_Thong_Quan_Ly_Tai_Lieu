@@ -30,11 +30,11 @@
                     <thead></thead>
                     <tbody>
                         <tr>
-                            <td style="text-align: right;font-size: 20px">Tên người dùng</td>
+                            <td style="text-align: right;font-size: 20px">Email:  </td>
                             <td style="font-size: 20px"><input type="text" name="uname" id="fname" onkeydown="HideError()" size="20px;" /></td>
                         </tr>
                         <tr>
-                            <td style="text-align: right;font-size: 20px">Mật khẩu</td>
+                            <td style="text-align: right;font-size: 20px">Mật khẩu: </td>
                             <td style="font-size: 20px"><input type="password" name="password" id="password" onkeydown="HideError()" size="20px;" /></td>
                         </tr>
 
@@ -44,7 +44,11 @@
                         </tr>
                         <tr>
                             <td style="color:#F8F8FF;">dddddddddddddddd</td>
-                            <td style="color:green;"><a href="#" onclick="getPage('forgetPassword.php')"><i>Quên mật khẩu ...!</i></a></td>
+                            <td style="color:green;"><a href="#" onclick="getPage('forgetPassword.php')"><i>Quên mật khẩu?</i></a></td>
+                        </tr>
+                        <tr>
+                            <td style="color:#F8F8FF;">dddddddddddddddd</td>
+                            <td style="color:green;"><a href="#" onclick="getPage('../User/Registration.php')"><i>Chưa có tài khoản? Đăng ký.</i></a></td>
                         </tr>
 
                     </tbody>

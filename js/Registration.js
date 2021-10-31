@@ -38,8 +38,8 @@ function Validate() {
     return false;
   }
 
-  if (document.Myform.password.value >= 4) {
-    error("Password should be greater than 4 characters");
+  if (document.Myform.password.value =="" ) {
+    error("Enter enter email address");
     document.Myform.password.focus();
     return false;
   }

@@ -3,7 +3,7 @@
         
         session_start();
         ob_start();
-        include '../connection.php';
+        include '../config/connection.php';
         
         
         $uname = htmlentities(stripslashes(mysqli_real_escape_string($con,$_POST['uname'])));
@@ -19,14 +19,14 @@
            $_SESSION['type'] = $row['type'];
            
            if($_SESSION['type'] == 'Admin'){
-               header('location:../index.php'); 
+               header('location:../Admin/index.php'); 
            }
-           elseif ($_SESSION['type'] == 'Normal') {
-               header('location:../Normal/index.php');
+           elseif ($_SESSION['type'] == 'user') {
+               header('location:../User/index.php');
        }
         }
  else {
-            header('location:../ErrorMesage.php');
+            header('location:ErrorMesage.php');
  }
  
  ob_end_flush();       

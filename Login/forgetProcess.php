@@ -1,5 +1,5 @@
 <?php 
-    include_once '../connection.php';
+    include_once '../config/connection.php';
     if(isset($_POST['submit'])){
 
         $email = htmlentities(stripslashes(mysqli_real_escape_string($con,$_POST['email'])));

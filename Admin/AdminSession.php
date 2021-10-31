@@ -5,5 +5,5 @@
         header('location:Login/login.php');
         exit();
     }
-    include 'connection.php'
+    include '../config/connection.php'
 ?>

@@ -1,6 +1,3 @@
-<?php 
-session_start();
- ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,8 +14,8 @@ session_start();
 
 <div id="content">
     
-    <h1 style="margin-left: 5em;"> Thành công</h1>
-    <h2 style="color: green">Bạn đã tải lên thành công tệp của mình </h2>
+    <h1 style="margin-left: 5em;">Thành công</h1>
+    <h2 style="color: green">Bạn đã thành công đăng ký người dùng mới</h2>
     
 </div>
 
@@ -31,7 +28,6 @@ session_start();
 </body>
 </html>
 <?php
-$path = ($_SESSION['type'] == 'Admin') ? "../" : "../user/";
     $loc = "../";
 					
 					echo '<script> 

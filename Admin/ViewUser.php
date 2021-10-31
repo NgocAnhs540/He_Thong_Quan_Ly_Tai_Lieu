@@ -1,10 +1,7 @@
 
 <?php
-@session_start();
 include_once '../config/connection.php';
-$email = $_SESSION['email'];
-$password = $_SESSION['password'];
-$sql="SELECT * FROM user where email = '$email' AND password = '$password'";
+$sql="SELECT * FROM user";
 $res=mysqli_query($con,$sql) or die(mysqli_error($con));
 ?>
 <html>
@@ -23,9 +20,9 @@ $res=mysqli_query($con,$sql) or die(mysqli_error($con));
 <th>Tên</th>
 <th>Họ</th>
 <th>Số điện thoại</th>
-<th>Địa chỉ Email</th>
+<th>Địa chỉ email</th>
 <th>Kiểu người dùng</th>
-<th>Hành động</th>
+<th colspan=2>Hành động</th>
 </tr>
 <?php
 while($row=mysqli_fetch_assoc($res))
@@ -44,8 +41,8 @@ echo $row['email'];
 echo "</td><td>";
 echo $row['type'];
 echo "
-
-<td><a href=\"#\" onclick=\"getPage('Edit.php?data=".$row['id']."')\">Edit</a></td></tr>";
+<td><a href=\"User/delete.php?data=".$row['id']."\">delete</a></td>
+<td><a href=\"#\" onclick=\"getPage('User/Edit.php?data=".$row['id']."')\">edit</a></td></tr>";
 }
 mysqli_close($con);
 ?>

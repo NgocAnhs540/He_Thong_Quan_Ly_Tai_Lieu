@@ -8,16 +8,15 @@
         $lname =$row['lname'];
         $phone = $row['phone'];
         $email = $row['email'];
-        
-        
+        $password = $row['password'];
     }
 ?>
 <script type="text/javascript" src="Registration.js"></script>
 <script type="text/javascript">
 
 </script>
-<h2 style="text-align: center;">Form đăng kí người dùng</h2>
-<form name="Myform" id="Myform" action="EditProcess.php?id='<?php echo $id;?>'" method="post" onsubmit="return(Validate());">
+<h2 style="text-align: center;">Form chỉnh sửa người dùng </h2>
+<form name="Myform" id="Myform" action="User/EditProcess.php?id='<?php echo $id;?>'" method="post" onsubmit="return(Validate());">
    <div id="error" style="color:red; font-size:16px; font-weight:bold; padding:5px"></div>
     <table style="width:100px; margin-left: 14em;">
         <thead></thead>
@@ -40,12 +39,21 @@
             </tr>
             <tr>
                 <td>Mật khẩu</td>
-                <td><input type="password" name="password" id="password" onkeydown="HideError()" /></td>
+                <td><input type="password" name="password" id="password" onkeydown="HideError()" value = "<?php echo $password?>"/></td>
             </tr>
-            
+            <tr>
+                <td>Kiểu người dùng</td>
+                <td>
+                    <select name="usertype" id="usertype" onkeydown="HideError()">
+                        <option value="user" selected>Chọn kiểu người dùng</option>
+                        <option value="Normal">Thông thường</option>
+                        <option value="Admin" >Quản trị</option>
+                    </select>
+                </td>
+            </tr>
             <tr>
                 <td style="color:#F8F8FF;">dddddddddddddddd</td>
-                <td><input type="submit" name="submit" value="Update" /></td>
+                <td><input type="submit" name="submit" value="Sửa" /></td>
             </tr>
         
         </tbody>

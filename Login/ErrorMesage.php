@@ -2,8 +2,8 @@
 <html>
 <head>
 <title>Docs | Đăng nhập </title>
-<link rel="stylesheet" href="css/login.css">
-<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<link rel="stylesheet" href="../css/login.css">
+<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
 <script>
             function getPage(url){
                 $('#content').hide(1000,function(){
@@ -38,7 +38,7 @@
 </body>
 </html>
 <?php
-    $loc = ".//Login/login.php";
+    $loc = "login.php";
 					
 					echo '<script> 
 					

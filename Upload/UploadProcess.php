@@ -1,5 +1,5 @@
 <?php
-    include '../connection.php';
+    include '../config/connection.php';
     if(isset($_POST['upload'])&&$_FILES['userfile']['size']>0)
     {
         $fileName = $_FILES['userfile']['name'];

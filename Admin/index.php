@@ -14,10 +14,10 @@
 <html>
     <head>
         <title>Trang chủ | Hệ thống quản lý tài liệu</title>
-        <link rel="stylesheet" href="css/index.css">
-        <link rel="shortcut icon" href="image/Address Book.png" >
-        <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-        <script type="text/javascript" src="js/Registration.js"></script>
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="shortcut icon" href="../image/Address Book.png" >
+        <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="../js/Registration.js"></script>
         <script>
             function getPage(url){
                 $('#content').hide(1000,function(){
@@ -28,25 +28,25 @@
         </script>
     </head>
     <body>
-        <div id="wrap">
+        <div id="wrap-fluid">
             <div id="header">
                 <div id="logo">
-                    <h1 style="text-align: center;color: green"><span><img src="image/Address Book.png" alt="logo" /></span>Hệ thống quản lý tài liệu</h1>  
+                    <h1 style="text-align: center;color: green"><span><img src="../image/Address Book.png" alt="logo" /></span>Hệ thống quản lý tài liệu</h1>  
                 </div>
                 </div>
             <div id="menu">
                 <ul>
-                <li><a href="#" onclick="getPage('User/Registration.php')">Đăng ký</a></li>
+                <li><a href="#" onclick="getPage('../Admin/Registration.php')">Đăng ký</a></li>
                 <li><a href="#">Quản lý tài liệu</a>
                 <ul>
-                <li><a href="#" onclick="getPage('Upload/Upload.php')">Thêm một tài liệu mới</a></li>
-                <li><a href="#" onclick="getPage('View/View.php')">Xem tất cả tài liệu</a></li>
+                <li><a href="#" onclick="getPage('../Upload/Upload.php')">Thêm một tài liệu mới</a></li>
+                <li><a href="#" onclick="getPage('../View/View.php')">Xem tất cả tài liệu</a></li>
 
                 </ul>
                 </li> 
-                <li><a href="logout.php">Đăng xuất</a></li>
+                <li><a href="../logout.php">Đăng xuất</a></li>
                 
-                <li style="margin-top: 5px;margin-left: 25em;">Chào mừng: <?php echo $username?></li>
+                <li style="margin-top: 5px;margin-left:60em;">Chào mừng: <?php echo $username?></li>
                 
                 </ul>
             </div>
@@ -65,16 +65,16 @@
             <h3>Bảng điều khiển</h3>
             <table style="border: 1px black solid;background-color: #607B8B;">
                 <tr>
-                    <td><li><a href="#" onclick="getPage('Upload/Upload.php')">Thêm tài liệu mới</a></li></td>
+                    <td><li><a href="#" onclick="getPage('../Upload/Upload.php')">Thêm tài liệu mới</a></li></td>
                 </tr>
                 <tr>
-                    <td><li><a href="#" onclick="getPage('View/View.php')">Xem tài liệu</a></li></td>
+                    <td><li><a href="#" onclick="getPage('../View/View.php')">Xem tài liệu</a></li></td>
                 </tr>
                 <tr>
-                    <td><li><a href="#" onclick="getPage('User/Registration.php')">Thêm người dùng</a></li></td>
+                    <td><li><a href="#" onclick="getPage('../Admin/Registration.php')">Thêm người dùng</a></li></td>
                 </tr>
                 <tr>
-                    <td><li><a href="#" onclick="getPage('User/ViewUser.php')">Hiển thị người dùng</a></li></td>
+                    <td><li><a href="#" onclick="getPage('../Admin/ViewUser.php')">Hiển thị người dùng</a></li></td>
                 </tr>
 
             </table>

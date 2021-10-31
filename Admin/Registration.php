@@ -4,7 +4,7 @@
 
 </script>
 <h2 style="text-align: center;">Form đăng ký người dùng </h2>
-<form name="Myform" id="Myform" action="User/RegisterProcess.php" method="post" onsubmit="return(Validate());">
+<form name="Myform" id="Myform" action="RegisterProcess.php" method="post" onsubmit="return(Validate());">
    <div id="error" style="color:red; font-size:16px; font-weight:bold; padding:5px"></div>
     <table style="width:100px; margin-left: 14em;">
         <thead></thead>
@@ -33,8 +33,8 @@
                 <td>Kiểu người dùng</td>
                 <td>
                     <select name="usertype" id="usertype" onkeydown="HideError()">
-                        <option value="user" selected>Chọn loại người dùng</option>
-                        <option value="Normal">Bình thường</option>
+                        <option value="" selected>Chọn loại người dùng</option>
+                        <option value="user">Bình thường</option>
                         <option value="Admin" >Quản trị</option>
                     </select>
                 </td>
