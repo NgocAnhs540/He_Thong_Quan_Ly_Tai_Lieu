@@ -71,7 +71,7 @@
                     <td><li><a href="#" onclick="getPage('../View/View.php')">Xem tài liệu</a></li></td>
                 </tr>
                 <tr>
-                    <td><li><a href="#" onclick="getPage('../Admin/Registration.php')">Thêm người dùng</a></li></td>
+                    <td><li><a href="#" onclick="getPage('../Admin/Registation.php')">Thêm người dùng</a></li></td>
                 </tr>
                 <tr>
                     <td><li><a href="#" onclick="getPage('../Admin/ViewUser.php')">Hiển thị người dùng</a></li></td>
@@ -83,7 +83,7 @@
             <div class= "clear"></div>
             </div>
             <div id="footer">
-            &copy;Nguyễn Thị Ngọc Ánh 1951060540
+            @He_thong_quan_ly_tai_lieu
             </div>
         </div>
     </body>

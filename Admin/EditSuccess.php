@@ -8,29 +8,27 @@
 <div id="wrap">
 <div id="header">
 <div id="logo">
-    <h1 style="text-align: center;"><span style="color:green">Thông báo</span></h1>  
+    <h1 style="text-align: center;">DFS | <span style="color:green">Thông báo</span></h1>  
 </div>
 </div>
 
 <div id="content">
     
     <h1 style="margin-left: 5em;">Thành công</h1>
-    <h2 style="color: green">Bạn đã thêm thành công người quản trị mới, chờ đợi quản trị mới chấp nhận </h2>
+    <h2 style="color: green">Bạn đã thành công chỉnh sửa thông tin người dùng</h2>
     
 </div>
-
-
 
 <div class= "clear"></div>
 
 <div id="footer">
-@He_thong_quan_ly_tai_lieu
+&copy;Nguyễn Thị Ngọc Ánh 1951060540
 </div>
 </div>
 </body>
 </html>
 <?php
-    $loc = "index.php";
+    $loc = "ViewUser.php";
 					
 					echo '<script> 
 					
