@@ -1,3 +1,53 @@
+<?php
+
+include('../config/connection.php');
+
+session_start();
+
+$email = $password  = null;
+$errors = array('all' => '');
+$noti = "";
+if (isset($_SESSION['email'])) header("Location: login.php");
+if (isset($_GET['status']))  $noti = $_GET['status'] == 0 ? "Đăng ký thành công, vui lòng kiểm tra email để kích hoạt tài khoản" : "Kích hoạt tài khoản thành công";
+if (isset($_POST['submit-login'])) {
+
+    $email = $_POST['uname'];
+    $password = $_POST['password'];
+
+    $query = "SELECT * From user where email = '$email'";
+    $res = mysqli_query($con, $query);
+    $row = mysqli_num_rows($res);
+    if ($row > 0) {
+        $user_logged = mysqli_fetch_assoc($res);
+        if ($user_logged['status'] == 0) {
+            $errors['all'] = "Tài khoản chưa được kích hoạt";
+        } else {
+
+                   
+                   $_SESSION['email'] = $user_logged['email'];
+                   $_SESSION['password'] = $user_logged['password'];
+                   $_SESSION['type'] = $user_logged['type'];
+                   
+                   if($_SESSION['type'] == 'Admin'){
+                       header('location:../Admin/index.php'); 
+                   }
+                   elseif ($_SESSION['type'] == 'user') {
+                       header('location:../User/index.php');
+               
+            } else {
+                $errors['all'] = "Tên đăng nhập hoặc mật khẩu không chính xác";
+                $email = $password  = "";
+            }
+        }
+    }
+}
+
+    
+
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -22,9 +72,19 @@
                 <h1 style="text-align: center;">DFS | <span style="color:green">Login</span></h1>
             </div>
         </div>
+        <?php if (isset($_GET['status'])) : ?>
+                                        <div class="alert alert-success text-center " role="alert">
+                                            <?php echo $noti ?>
+                                        </div>
+                                    <?php endif; ?>
+                                    <?php if (isset($_POST['submit-login'])) : ?>
+                                            <div class="alert alert-danger text-center" role="alert">
+                                                <?php echo $errors['all'] ?>
+                                            </div>
+                                        <?php endif; ?>
 
         <div id="content">
-            <form name="Myform" id="Myform" action="loginProcess.php" method="post" onsubmit="return(Validate());">
+            <form name="Myform" id="Myform" action="" method="post" onsubmit="return(Validate());">
                 <div id="error" style="color:red; font-size:16px; font-weight:bold; padding:5px"></div>
                 <table style="width:100px; margin-left:2em;">
                     <thead></thead>
@@ -40,7 +100,7 @@
 
                         <tr>
                             <td style="color:#F8F8FF;">dddddddddddddddd</td>
-                            <td><input type="submit" name="submit" value="Login" /></td>
+                            <td><input type="submit" name="submit-login" value="Login" /></td>
                         </tr>
                         <tr>
                             <td style="color:#F8F8FF;">dddddddddddddddd</td>
@@ -48,7 +108,7 @@
                         </tr>
                         <tr>
                             <td style="color:#F8F8FF;">dddddddddddddddd</td>
-                            <td style="color:green;"><a href="#" onclick="getPage('../User/Registration.php')"><i>Chưa có tài khoản? Đăng ký.</i></a></td>
+                            <td style="color:green;"><a href="#" onclick="getPage('../User/Registation.php')"><i>Chưa có tài khoản? Đăng ký.</i></a></td>
                         </tr>
 
                     </tbody>
