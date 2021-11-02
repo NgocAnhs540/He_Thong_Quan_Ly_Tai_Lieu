@@ -1,5 +1,5 @@
 <?php
-include_once '../connection.php';
+include_once '../config/connection.php';
 //$sql1="SELECT Receipt FROM upload WHERE id=".$_REQUEST['data'];
 //
 //$res1=mysqli_query($con,$sql1) or die(mysqli_error($con));
@@ -9,7 +9,7 @@ $sql2="DELETE FROM upload WHERE id=".$_REQUEST['data'];
 $res2=mysqli_query($con,$sql2) or die(mysqli_error($con));
 if($res2)
 {
-    echo true;
+echo true;
 }
 mysqli_close($con);
 ?> 
