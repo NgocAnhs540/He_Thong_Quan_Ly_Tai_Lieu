@@ -12,4 +12,3 @@
             header('location:Success.php');
         }
     }
-?>
