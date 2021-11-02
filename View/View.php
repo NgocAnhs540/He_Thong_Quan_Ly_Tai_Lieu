@@ -36,11 +36,11 @@ $res = mysqli_query($con, $sql) or die(mysqli_error($con));
 
 	<table id="viewdata">
 		<tr>
-			<th>Id</th>
-			<th>Name</th>
-			<th>Size</th>
+			<th>STT</th>
+			<th>Tên</th>
+			<th>Kích thước</th>
 
-			<th colspan=2>Action</th>
+			<th colspan=2>Hành động</th>
 		</tr>
 		<?php
 		$i = 1;
@@ -54,8 +54,8 @@ $res = mysqli_query($con, $sql) or die(mysqli_error($con));
 			echo number_format(($row['size'] / 1024), 2) . " Kb";
 			$path = ($_SESSION['type'] == 'Admin') ? "./" : "../";
 			echo "
-<td><a href='" . $path . "View/delete.php?data=" . $row['id'] . "' class='del_doc'>delete</a></td>
-<td><a href='" . $path . "View/download.php?id=" . $row['id'] . "'>download</a></td></tr>";
+<td><a href='" . $path . "View/delete.php?data=" . $row['id'] . "' class='del_doc'>Xóa</a></td>
+<td><a href='" . $path . "View/download.php?id=" . $row['id'] . "'>Tải xuống</a></td></tr>";
 			$i++;
 		}
 		mysqli_close($con);

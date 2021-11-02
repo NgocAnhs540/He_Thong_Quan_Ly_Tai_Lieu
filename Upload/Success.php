@@ -25,7 +25,7 @@ session_start();
 <div class= "clear"></div>
 
 <div id="footer">
-&copy;Nguyễn Thị Ngọc Ánh 1951060540
+&copy;Nhóm 10
 </div>
 </div>
 </body>
