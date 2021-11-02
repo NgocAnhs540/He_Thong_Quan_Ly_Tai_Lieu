@@ -39,7 +39,7 @@
             
             <tr>
                 <td style="color:#F8F8FF;">dddddddddddddddd</td>
-                <td><input type="submit" name="submit" value="Login" /></td>
+                <td><input type="submit" name="submit" value="Đăng nhập" /></td>
             </tr>
             <tr>
                 <td style="color:#F8F8FF;">dddddddddddddddd</td>
@@ -55,7 +55,7 @@
 <div class= "clear"></div>
 
 <div id="footer">
-&copy;coders 2014
+&copy;Nguyễn Thị Ngọc Ánh 1951060540
 </div>
 </div>
 </body>

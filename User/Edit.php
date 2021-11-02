@@ -50,7 +50,7 @@
             </tr>
             <tr>
                 <td style="color:#F8F8FF;">dddddddddddddddd</td>
-                <td><input type="submit" name="submit" value="Update" /></td>
+                <td><input type="submit" name="submit" value="Cập nhật" /></td>
             </tr>
         
         </tbody>

@@ -89,12 +89,12 @@ $res = mysqli_query($con, $sql) or die(mysqli_error($con));
 				$.ajax({
 					url: loc,
 					error: err => {
-						alert("An error occured");
+						alert("Một lỗi đã xảy ra");
 						console.log(err)
 					},
 					success: function(resp) {
 						if (resp == 1) {
-							alert("File successfully deleted");
+							alert("Tài liệu được xóa thành công");
 							getPage('<?php echo $path ?>View/View.php')
 						}
 					}
