@@ -1,7 +1,10 @@
 <?php
 session_start();
-include_once '../connection.php';
-$sql = "SELECT * FROM upload";
+include('../config/connection.php');
+$sql = "SELECT * FROM `upload`";
+$res=mysqli_query($con,$sql) or die(mysqli_error($con));
+include_once '../config/connection.php';
+$sql = "SELECT * FROM `upload`";
 $res = mysqli_query($con, $sql) or die(mysqli_error($con));
 ?>
 <html>
@@ -27,36 +30,41 @@ $res = mysqli_query($con, $sql) or die(mysqli_error($con));
 		}
 
 		input#search {
-			width: 230px;
+			width: 30%;
 			height: 25px;
 		}
+
 	</style>
 	<input type="text" id="search" onkeyup="searchForName()" placeholder="Tìm kiếm theo tên.." title="Nhập vào một cái tên">
 
 	<table id="viewdata">
 		<tr>
-			<th>STT</th>
-			<th>Tên</th>
-			<th>Kích thước</th>
-
-			<th colspan=2>Hành động</th>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Size(Kb)</th>
+			<th>Times</th>
+			<th>Delete</th>
+			<th>Download</th>
 		</tr>
 		<?php
-		$i = 1;
-
+		   $conn = new mysqli('localhost','root','','doc_db');
+		   $sql = "SELECT * FROM upload";
+		   $result = $con->query($sql);
+        $i = 1; 
 		while ($row = mysqli_fetch_assoc($res)) {
-			echo "<tr><td>";
-			echo $i;
-			echo "</td><td>";
-			echo $row['name'];
-			echo "</td><td>";
-			echo number_format(($row['size'] / 1024), 2) . " Kb";
 			$path = ($_SESSION['type'] == 'Admin') ? "./" : "../";
+			
 			echo "
-<td><a href='" . $path . "View/delete.php?data=" . $row['id'] . "' class='del_doc'>Xóa</a></td>
-<td><a href='" . $path . "View/download.php?id=" . $row['id'] . "'>Tải xuống</a></td></tr>";
-			$i++;
-		}
+			  <tr> 
+			  <td>".$i++."</td>
+			  <td>".$row['name']." </td>
+			  <td>".number_format(($row['size']/1024),2)."  </td>
+			  <td>".$row['Times']."</td>
+			 <td><a href='View/delete.php?data=" . $row['id'] . "' class='del_doc'>delete</a></td>
+			<td><a href='View/download.php?id=" . $row['id'] . "'>download</a></td>
+			
+			</tr>";
+			}
 		mysqli_close($con);
 		?>
 	</table>
@@ -88,12 +96,12 @@ $res = mysqli_query($con, $sql) or die(mysqli_error($con));
 				$.ajax({
 					url: loc,
 					error: err => {
-						alert("Một lỗi đã xảy ra");
+						alert("An error occured");
 						console.log(err)
 					},
 					success: function(resp) {
 						if (resp == 1) {
-							alert("Tài liệu được xóa thành công");
+							alert("File successfully deleted");
 							getPage('<?php echo $path ?>View/View.php')
 						}
 					}
