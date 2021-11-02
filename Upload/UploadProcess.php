@@ -17,7 +17,7 @@ if (isset($_POST['upload']) && $_FILES['userfile']['size'] > 0) {
     if ($con) {
         $query = "INSERT INTO upload (name, size, type, content ) " .
             "VALUES ('$fileName', '$fileSize', '$fileType', '$content')";
-        mysqli_query($con, $query) or die('Error, query failed');
+        mysqli_query($con, $query) or die('Lỗi, truy vấn thất bại');
         mysqli_close($con);
         header('location:Success.php');
     } else {
