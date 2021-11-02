@@ -30,14 +30,14 @@
 <?php
     $loc = "../";
 					
-					echo '<script> 
-					
-					function refPage() {
-						var loc = "'.$loc.'";
-						document.location = loc;
-					}
-					
-					setInterval(\'refPage()\', 2000);
-					
-					</script>';
+	echo '<script> 
+	
+	function refPage() {
+		var loc = "'.$loc.'";
+		document.location = loc;
+	}
+	
+	setInterval(\'refPage()\', 2000);
+	
+	</script>';
 ?>

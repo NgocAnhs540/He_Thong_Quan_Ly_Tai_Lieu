@@ -43,12 +43,12 @@ $loc = "./login.php";
 
 echo '<script> 
 					
-					function refPage() {
-						var loc = "' . $loc . '";
-						document.location = loc;
-					}
+        function refPage() {
+            var loc = "' . $loc . '";
+            document.location = loc;
+        }
+        
+        setInterval(\'refPage()\', 2000);
 					
-					setInterval(\'refPage()\', 2000);
-					
-					</script>';
+	</script>';
 ?>

@@ -10,6 +10,6 @@ $res2=mysqli_query($con,$sql2) or die(mysqli_error($con));
 mysqli_close($con);
 if($res2)
 {
-header("location:../index.php?msg=du-lieu-xoa-thanh-cong");
+    header("location:../index.php?msg=du-lieu-xoa-thanh-cong");
 }
-?> 
+?>

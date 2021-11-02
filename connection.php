@@ -6,6 +6,6 @@ if($con)
     mysqli_select_db($con,"doc_db");
 }
  else {
-     echo "could not connect to the database".die(mysqli_error($con));
+     echo "Không thể kết nối tới cơ sở dữ liệu".die(mysqli_error($con));
 }
 ?>

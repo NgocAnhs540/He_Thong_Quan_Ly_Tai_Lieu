@@ -30,7 +30,6 @@ $res = mysqli_query($con, $sql) or die(mysqli_error($con));
 			width: 230px;
 			height: 25px;
 		}
-
 	</style>
 	<input type="text" id="search" onkeyup="searchForName()" placeholder="Tìm kiếm theo tên.." title="Nhập vào một cái tên">
 
