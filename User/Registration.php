@@ -34,7 +34,7 @@
                 <td>
                     <select name="usertype" id="usertype" onkeydown="HideError()">
                         <option value="user" selected>Chọn loại người dùng</option>
-                        <option value="Normal">Bình thường</option>
+                        <option value="Normal">Khách</option>
                         <option value="Admin" >Quản trị</option>
                     </select>
                 </td>

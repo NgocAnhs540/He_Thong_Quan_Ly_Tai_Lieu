@@ -14,7 +14,7 @@ cellspacing="1" class="box">
 <input type="hidden" name="MAX_FILE_SIZE"value="16000000">
 <input name="userfile" type="file" id="userfile"> 
 </td>
-<td><input name="upload"type="submit" class="box" id="upload" value=" Upload "></td>
+<td><input name="upload"type="submit" class="box" id="upload" value="Tải lên"></td>
 </tr>
 </table>
 </form>

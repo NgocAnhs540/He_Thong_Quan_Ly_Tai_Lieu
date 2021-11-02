@@ -42,8 +42,8 @@
                 <td>Kiểu người dùng</td>
                 <td>
                     <select name="usertype" id="usertype" onkeydown="HideError()">
-                        <option value="user" selected>Chọn kiểu người dùng</option>
-                        <option value="Normal">Thông thường</option>
+                        <option value="User" selected>Chọn kiểu người dùng</option>
+                        <option value="Normal">Khách</option>
                         <option value="Admin" >Quản trị</option>
                     </select>
                 </td>

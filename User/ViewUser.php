@@ -16,7 +16,7 @@ $res=mysqli_query($con,$sql) or die(mysqli_error($con));
 </style>
 <table id="viewdata">
 <tr>
-<th>#</th>
+<th>STT</th>
 <th>Tên</th>
 <th>Họ</th>
 <th>Số điện thoại</th>
@@ -41,8 +41,8 @@ echo $row['email'];
 echo "</td><td>";
 echo $row['type'];
 echo "
-<td><a href=\"User/delete.php?data=".$row['id']."\">delete</a></td>
-<td><a href=\"#\" onclick=\"getPage('User/Edit.php?data=".$row['id']."')\">edit</a></td></tr>";
+<td><a href=\"User/delete.php?data=".$row['id']."\">Xóa</a></td>
+<td><a href=\"#\" onclick=\"getPage('User/Edit.php?data=".$row['id']."')\">Chỉnh sửa</a></td></tr>";
 }
 mysqli_close($con);
 ?>

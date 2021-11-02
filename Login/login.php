@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Docs | Login</title>
+<title>Đăng nhập</title>
 <link rel="stylesheet" href="../css/login.css">
 <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
 <script>
@@ -18,7 +18,7 @@
 <div id="wrap">
 <div id="header">
 <div id="logo">
-    <h1 style="text-align: center;">DFS | <span style="color:green">Login</span></h1>  
+    <h1 style="text-align: center;"><span style="color:green">Đăng nhập</span></h1>  
 </div>
 </div>
 
@@ -55,7 +55,7 @@
 <div class= "clear"></div>
 
 <div id="footer">
-&copy;Nguyễn Thị Ngọc Ánh 1951060540
+&copy;Nhóm 10
 </div>
 </div>
 </body>

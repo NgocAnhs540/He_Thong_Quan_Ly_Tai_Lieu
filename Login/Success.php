@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Docs | Thành công</title>
-<link rel="stylesheet" href="../css/login.css">
-<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
-<script>
-            function getPage(url){
-                $('#content').hide(1000,function(){
+    <title>Thành công</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+    <script>
+        function getPage(url) {
+            $('#content').hide(1000, function() {
                 $('#content').load(url);
-                $('#content').show(1000,function(){});
-                });
-            }
-
-        </script>
+                $('#content').show(1000, function() {});
+            });
+        }
+    </script>
 </head>
+
 <body>
-<div id="wrap">
-<div id="header">
-<div id="logo">
-    <h1 style="text-align: center;">DFS | <span style="color:green">Thông báo</span></h1>  
-</div>
-</div>
+    <div id="wrap">
+        <div id="header">
+            <div id="logo">
+                <h1 style="text-align: center;"><span style="color:green">Thông báo</span></h1>
+            </div>
+        </div>
 
-<div id="content">
-    
-    <h1 style="margin-left: 5em;"> Thành công</h1>
-    <h2 style="color: green">Bạn đã đổi mật khẩu thành công</h2>
-    
-</div>
+        <div id="content">
 
-<div class= "clear"></div>
+            <h1 style="margin-left: 5em;"> Thành công</h1>
+            <h2 style="color: green">Bạn đã đổi mật khẩu thành công</h2>
 
-<div id="footer">
-&copy;Nguyễn Thị Ngọc Ánh 1951060540
-</div>
+        </div>
+
+        <div class="clear"></div>
+
+        <div id="footer">
+            &copy;Nhóm 10
+        </div>
 </body>
+
 </html>
 <?php
-    $loc = "./login.php";
-					
-					echo '<script> 
+$loc = "./login.php";
+
+echo '<script> 
 					
 					function refPage() {
-						var loc = "'.$loc.'";
+						var loc = "' . $loc . '";
 						document.location = loc;
 					}
 					

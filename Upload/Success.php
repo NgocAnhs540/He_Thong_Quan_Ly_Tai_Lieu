@@ -4,14 +4,14 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-<title>Docs | Thành công</title>
+<title>Thành công</title>
 <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
 <div id="wrap">
 <div id="header">
 <div id="logo">
-    <h1 style="text-align: center;">DFS | <span style="color:green">Thông báo</span></h1>  
+    <h1 style="text-align: center;"><span style="color:green">Thông báo</span></h1>  
 </div>
 </div>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Docs | Login</title>
+<title>Đăng nhập</title>
 <link rel="stylesheet" href="css/login.css">
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 <script>
@@ -18,21 +18,21 @@
 <div id="wrap">
 <div id="header">
 <div id="logo">
-    <h1 style="text-align: center;">DFS | <span style="color:green">Error Message</span></h1>  
+    <h1 style="text-align: center;"><span style="color:green">Thông báo lỗi</span></h1>  
 </div>
 </div>
 
 <div id="content">
     
-    <h1 style="margin-left: 5em;"> ERROR</h1>
-    <h2 style="color: red">Wrong Username or Password</h2>
+    <h1 style="margin-left: 5em;">Lỗi</h1>
+    <h2 style="color: red">Tên người dùng hay mật khẩu sai</h2>
     
 </div>
 
 <div class= "clear"></div>
 
 <div id="footer">
-&copy;coders 2014
+&copy;Nhóm 10
 </div>
 </div>
 </body>
