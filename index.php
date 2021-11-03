@@ -1,5 +1,6 @@
 <?php
-    include_once 'AdminSession.php';
+    include('config/connection.php');
+    include( 'Admin/AdminSession.php');
     $uname = $_SESSION['email'];
     $password = $_SESSION['password'];
     $chekUser = mysqli_query($con,"Select * from user where email= '$uname' AND password = '$password'") or die(mysqli_error($con));
@@ -27,8 +28,12 @@
             }
         </script>
     </head>
+    <?php
+    include('config/connection.php');
+    if (isset($_GET['status']))  $noti = $_GET['status'] == 0 ? "Bạn đã thêm thành công, vui lòng kiểm tra email để kích hoạt tài khoản" : "Người dùng đã chấp nhận lời mời";
+    ?>
     <body>
-        <div id="wrap">
+        <div id="wrap-fluid">
             <div id="header">
                 <div id="logo">
                     <h1 style="text-align: center;color: green"><span><img src="image/Address Book.png" alt="logo" /></span>Hệ thống quản lý tài liệu</h1>  
@@ -36,7 +41,7 @@
                 </div>
             <div id="menu">
                 <ul>
-                <li><a href="#" onclick="getPage('User/Registration.php')">Đăng ký</a></li>
+                <li><a href="#" onclick="getPage('Admin/Registration.php')">Đăng ký</a></li>
                 <li><a href="#">Quản lý tài liệu</a>
                 <ul>
                 <li><a href="#" onclick="getPage('Upload/Upload.php')">Thêm một tài liệu mới</a></li>
@@ -46,7 +51,7 @@
                 </li> 
                 <li><a href="logout.php">Đăng xuất</a></li>
                 
-                <li style="margin-top: 5px;margin-left: 25em;">Chào mừng: <?php echo $username?></li>
+                <li style="margin-top: 5px;margin-left:60em;">Chào mừng: <?php echo $username?></li>
                 
                 </ul>
             </div>
@@ -71,10 +76,10 @@
                     <td><li><a href="#" onclick="getPage('View/View.php')">Xem tài liệu</a></li></td>
                 </tr>
                 <tr>
-                    <td><li><a href="#" onclick="getPage('User/Registration.php')">Thêm người dùng</a></li></td>
+                    <td><li><a href="#" onclick="getPage('Admin/Registation.php')">Thêm người dùng</a></li></td>
                 </tr>
                 <tr>
-                    <td><li><a href="#" onclick="getPage('User/ViewUser.php')">Hiển thị người dùng</a></li></td>
+                    <td><li><a href="#" onclick="getPage('Admin/ViewUser.php')">Hiển thị người dùng</a></li></td>
                 </tr>
 
             </table>
@@ -83,7 +88,7 @@
             <div class= "clear"></div>
             </div>
             <div id="footer">
-            &copy;Nhóm 10
+            @He_thong_quan_ly_tai_lieu
             </div>
         </div>
     </body>
