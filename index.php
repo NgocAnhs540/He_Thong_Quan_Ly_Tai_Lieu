@@ -36,7 +36,7 @@
         <div id="wrap-fluid">
             <div id="header">
                 <div id="logo">
-                    <h1 style="text-align: center;color: green"><span><img src="image/Address Book.png" alt="logo" /></span>Hệ thống quản lý tài liệu</h1>  
+                    <h1 style="text-align: center;color: green"><strong><img src="image/Address Book.png" alt="img" /></strong>HỆ THỐNG QUẢN LÝ TÀI LIỆU</h1>  
                 </div>
                 </div>
             <div id="menu">
