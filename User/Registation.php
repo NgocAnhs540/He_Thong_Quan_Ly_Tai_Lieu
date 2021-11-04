@@ -3,7 +3,7 @@
 <script type="text/javascript">
 
 </script>
-<h2 style="text-align: center;">Form đăng ký người dùng </h2>
+<h2 style="text-align: center;">Đăng Ký Người Dùng </h2>
 <form name="Myform" id="Myform" action="../User/process-register.php" method="post" onsubmit="return(Validate());">
    <div id="error" style="color:red; font-size:16px; font-weight:bold; padding:5px"></div>
     <table style="width:100px;">
@@ -11,7 +11,7 @@
         <?php
                     if(isset($_GET['response'])){
                       if($_GET['response'] == 'successfully'){
-                        echo "<p class='text-danger'>Bạn đã đăng kí thành công</p>";
+                        echo "<p class='text-danger'>Bạn Đã Đăng Kí Thành Công</p>";
                         
                       }
 
@@ -59,11 +59,6 @@
             <tr>
                 <td style="color:#F8F8FF;">dddddddddddddddd</td>
                 <td><input type="submit" name="submit-reg" value="Thêm" /></td>
-            </tr>
-            <tr>
-                <td style="color:#F8F8FF;">dddddddddddddddd</td>
-                <td style="color:green;"><a href="login.php">
-                            << Quay lại</a></td>
             </tr>
         
         </tbody>

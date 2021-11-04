@@ -14,15 +14,15 @@
 
 <div id="content">
     
-    <h1 style="margin-left: 5em;">Thành công</h1>
-    <h2 style="color: green">Bạn đã thành công chỉnh sửa thông tin </h2>
+    <h1 style="text-align:center; margin-left: 5em;">CHÚC MỪNG</h1>
+    <h2 style="text-align: centrt; color: green">Bạn Đã Chỉnh Sửa Thông Tin Thành Công </h2>
     
 </div>
 
 <div class= "clear"></div>
 
 <div id="footer">
-@He_thong_quan_ly_tai_lieu
+@Nhóm 10
 </div>
 </div>
 </body>
