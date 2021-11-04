@@ -60,6 +60,11 @@
                 <td style="color:#F8F8FF;">dddddddddddddddd</td>
                 <td><input type="submit" name="submit-reg" value="Thêm" /></td>
             </tr>
+            <tr>
+                <td style="color:#F8F8FF;">dddddddddddddddd</td>
+                <td style="color:green;"><a href="login.php">
+                            << Quay lại</a></td>
+            </tr>
         
         </tbody>
     </table>

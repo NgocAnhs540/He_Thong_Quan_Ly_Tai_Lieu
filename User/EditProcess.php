@@ -15,7 +15,7 @@
         {
             $_SESSION['email'] = $email;
             $_SESSION['password'] = $password;
-            header('location:Success.php');
+            header('location:EditSuccess.php');
         }
     }
 ?>

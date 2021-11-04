@@ -29,7 +29,7 @@ if (isset($_POST['submit-login'])) {
                    $_SESSION['type'] = $user_logged['type'];
                    
                    if($_SESSION['type'] == 'Admin'){
-                       header('location:../Admin/index.php'); 
+                       header('location:../index.php'); 
                    }
                    elseif ($_SESSION['type'] == 'user') {
                        header('location:../User/index.php');
@@ -52,7 +52,8 @@ if (isset($_POST['submit-login'])) {
 <html>
 
 <head>
-    <title>Docs | Login</title>
+    <title>DFS | Login</title>
+    <link rel="shortcut icon" href="../image/Address Book.png" >
     <link rel="stylesheet" href="../css/login.css">
     <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
     <script>
@@ -108,7 +109,7 @@ if (isset($_POST['submit-login'])) {
                         </tr>
                         <tr>
                             <td style="color:#F8F8FF;">dddddddddddddddd</td>
-                            <td style="color:green;"><a href="#" onclick="getPage('../User/Registation.php')"><i>Chưa có tài khoản? Đăng ký.</i></a></td>
+                            <td style="color:green;">Chưa có tài khoản?<a href="#" onclick="getPage('../User/Registation.php')"><i></br> Đăng ký.</i></a></td>
                         </tr>
 
                     </tbody>

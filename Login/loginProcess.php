@@ -19,7 +19,7 @@
            $_SESSION['type'] = $row['type'];
            
            if($_SESSION['type'] == 'Admin'){
-               header('location:../Admin/index.php'); 
+               header('location:../index.php'); 
            }
            elseif ($_SESSION['type'] == 'user') {
                header('location:../User/index.php');

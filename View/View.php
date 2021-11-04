@@ -3,6 +3,9 @@ session_start();
 include('../config/connection.php');
 $sql = "SELECT * FROM `upload`";
 $res=mysqli_query($con,$sql) or die(mysqli_error($con));
+include_once '../config/connection.php';
+$sql = "SELECT * FROM `upload`";
+$res = mysqli_query($con, $sql) or die(mysqli_error($con));
 ?>
 <html>
 
@@ -44,6 +47,7 @@ $res=mysqli_query($con,$sql) or die(mysqli_error($con));
 			<th>Download</th>
 		</tr>
 		<?php
+		   $conn = new mysqli('localhost','root','','doc_db');
 		   $sql = "SELECT * FROM upload";
 		   $result = $con->query($sql);
         $i = 1; 
@@ -56,8 +60,8 @@ $res=mysqli_query($con,$sql) or die(mysqli_error($con));
 			  <td>".$row['name']." </td>
 			  <td>".number_format(($row['size']/1024),2)."  </td>
 			  <td>".$row['Times']."</td>
-			 <td><a href='" . $path . "../View/delete.php?data=" . $row['id'] . "' class='del_doc'>delete</a></td>
-			<td><a href='" . $path . "../View/download.php?id=" . $row['id'] . "'>download</a></td>
+			 <td><a href='View/delete.php?data=" . $row['id'] . "' class='del_doc'>delete</a></td>
+			<td><a href='View/download.php?id=" . $row['id'] . "'>download</a></td>
 			
 			</tr>";
 			}
