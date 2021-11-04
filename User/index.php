@@ -54,7 +54,6 @@
                 <li>Upload tài liệu lên hệ thống</li>
                 <li>Download tài liệu</li>
                 <li>Chỉnh sửa tài liệu cá nhân của bạn</li>
-                <li>Đăng kí người dùng mới</li>
                 <li>Chỉnh sửa thông tin người dùng</li>
             </ul>
             </div>

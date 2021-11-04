@@ -32,7 +32,7 @@
 <div class= "clear"></div>
 
 <div id="footer">
-&copy;Nhóm 3
+&copy;He_thong_quan_ly_tai_lieu
 </div>
 </div>
 </body>
