@@ -16,7 +16,7 @@ $res=mysqli_query($con,$sql) or die(mysqli_error($con));
 </style>
 <table id="viewdata">
 <tr>
-<th>#</th>
+<th>STT</th>
 <th>Tên</th>
 <th>Họ</th>
 <th>Số điện thoại</th>
@@ -25,11 +25,12 @@ $res=mysqli_query($con,$sql) or die(mysqli_error($con));
 <th colspan=2>Hành động</th>
 </tr>
 <?php
+$i = 1;
 while($row=mysqli_fetch_assoc($res))
 {
 
 echo "<tr><td>";
-echo $row['id'];
+echo $i;
 echo "</td><td>";
 echo $row['fname'];
 echo "</td><td>";
@@ -43,6 +44,7 @@ echo $row['type'];
 echo "
 <td><a href=\"Admin/delete.php?data=".$row['id']."\">delete</a></td>
 <td><a href=\"#\" onclick=\"getPage('Admin/Edit.php?data=".$row['id']."')\">edit</a></td></tr>";
+$i++;
 }
 mysqli_close($con);
 ?>

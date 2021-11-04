@@ -22,7 +22,7 @@
 <div class= "clear"></div>
 
 <div id="footer">
-&copy;Nguyễn Thị Ngọc Ánh 1951060540
+&copy;He_thong_quan_ly_tai_lieu
 </div>
 </div>
 </body>

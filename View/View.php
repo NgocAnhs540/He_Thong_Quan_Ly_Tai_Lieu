@@ -39,7 +39,7 @@ $res = mysqli_query($con, $sql) or die(mysqli_error($con));
 
 	<table id="viewdata">
 		<tr>
-			<th>Id</th>
+			<th>STT</th>
 			<th>Name</th>
 			<th>Size(Kb)</th>
 			<th>Times</th>
