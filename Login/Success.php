@@ -32,7 +32,7 @@
 <div class= "clear"></div>
 
 <div id="footer">
-&copy;@Nhóm 10
+&copy;Nhóm 10
 </div>
 </body>
 </html>
