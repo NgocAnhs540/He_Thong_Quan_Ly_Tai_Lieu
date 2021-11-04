@@ -14,8 +14,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Trang chủ | Hệ thống quản lý tài liệu</title>
-        <link rel="stylesheet" href="css/index.css">
+        <title>Trang chủ | Hệ hống quản lý tài liệu</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
         <link rel="shortcut icon" href="image/Address Book.png" >
         <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
         <script type="text/javascript" src="js/Registration.js"></script>
@@ -33,53 +33,53 @@
     if (isset($_GET['status']))  $noti = $_GET['status'] == 0 ? "Bạn đã thêm thành công, vui lòng kiểm tra email để kích hoạt tài khoản" : "Người dùng đã chấp nhận lời mời";
     ?>
     <body>
-        <div id="wrap-fluid">
+        <div id="wrap">
             <div id="header">
                 <div id="logo">
-                    <h1 style="text-align: center;color: green"><span><img src="image/Address Book.png" alt="logo" /></span>Hệ thống quản lý tài liệu</h1>  
+                    <h1 style="text-align: center;padding-top:0px; font-size: 35px; color: green"> <img src="image/Address Book.png" style="margin-bottom: -10px;" alt="logo" id="logo"/>HỆ THỐNG QUẢN LÝ TÀI LIỆU</h1>  
                 </div>
                 </div>
             <div id="menu">
                 <ul>
-                <li><a href="#" onclick="getPage('Admin/Registration.php')">Đăng ký</a></li>
-                <li><a href="#">Quản lý tài liệu</a>
+                <li><a href="#" onclick="getPage('Admin/Registation.php')">Thêm Quản Trị Viên</a></li>
+                <li><a href="#">Quản Lý Tài Liệu</a>
                 <ul>
-                <li><a href="#" onclick="getPage('Upload/Upload.php')">Thêm một tài liệu mới</a></li>
-                <li><a href="#" onclick="getPage('View/View.php')">Xem tất cả tài liệu</a></li>
+                <li><a href="#" onclick="getPage('Upload/Upload.php')">Thêm Tài Liệu Mới</a></li>
+                <li><a href="#" onclick="getPage('View/View.php')">Xem Tất Cả Tài Liệu</a></li>
 
                 </ul>
                 </li> 
-                <li><a href="logout.php">Đăng xuất</a></li>
+                <li><a href="logout.php">Đăng Xuất</a></li>
                 
-                <li style="margin-top: 5px;margin-left:60em;">Chào mừng: <?php echo $username?></li>
+                <li style="margin-top: -18px;margin-left:60em;">Chào mừng: <?php echo $username?></li>
                 
                 </ul>
             </div>
             <div id="main">
             <div id="content">
-            <h1>Chào mừng bạn đến với hệ thống quản lý tài liệu </h1>
+            <h1>Chào Mừng Đến Với Hệ Thống Quản Lý Tài Liệu </h1>
             <ul style="margin-left: 5em; margin-top: 2em;">
-                <li>Upload tài liệu lên hệ thống</li>
-                <li>Download tài liệu</li>
-                <li>Chỉnh sửa tài liệu cá nhân của bạn</li>
-                <li>Đăng kí người dùng mới</li>
-                <li>Chỉnh sửa thông tin người dùng</li>
+                <li>Upload Tài Liệu Lên Hệ Thống</li>
+                <li>Download Tài Liệu</li>
+                <li>Chỉnh Sửa Tài Liệu Cá Nhân</li>
+                <li>Đăng Kí Người Dùng Mới</li>
+                <li>Chỉnh Sửa Thông Tin Người Dùng</li>
             </ul>
             </div>
             <div id="side">
-            <h3>Bảng điều khiển</h3>
-            <table style="border: 1px black solid;background-color: #607B8B;">
+            <h3 style="margin: 25px;border:5px;background-color:yellow;">Bảng Điều Khiển</h3>
+            <table style="border: 2px red;background-color: yellow;">
                 <tr>
-                    <td><li><a href="#" onclick="getPage('Upload/Upload.php')">Thêm tài liệu mới</a></li></td>
+                    <td><li><a href="#" onclick="getPage('Upload/Upload.php')">Thêm Tài Liệu Mới</a></li></td>
                 </tr>
                 <tr>
-                    <td><li><a href="#" onclick="getPage('View/View.php')">Xem tài liệu</a></li></td>
+                    <td><li><a href="#" onclick="getPage('View/View.php')">Xem Tài Liệu</a></li></td>
                 </tr>
                 <tr>
-                    <td><li><a href="#" onclick="getPage('Admin/Registation.php')">Thêm người dùng</a></li></td>
+                    <td><li><a href="#" onclick="getPage('Admin/Registation.php')">Thêm Quản Trị Viên</a></li></td>
                 </tr>
                 <tr>
-                    <td><li><a href="#" onclick="getPage('Admin/ViewUser.php')">Hiển thị người dùng</a></li></td>
+                    <td><li><a href="#" onclick="getPage('Admin/ViewUser.php')">Hiển Thị Tài Khoản</a></li></td>
                 </tr>
 
             </table>
@@ -88,7 +88,7 @@
             <div class= "clear"></div>
             </div>
             <div id="footer">
-            @He_thong_quan_ly_tai_lieu
+            @Nhóm 10
             </div>
         </div>
     </body>
