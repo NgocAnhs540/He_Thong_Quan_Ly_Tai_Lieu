@@ -1,9 +1,9 @@
 <?php
     include_once '../config/connection.php';
     $id = $_REQUEST['data'];
-    $qry = mysqli_query($con,"Select * from user where id='$id'") or die(mysqli_error($con));
+    $qry = mysqli_query($con,"Select * from user where id_user='$id'") or die(mysqli_error($con));
     while($row = mysqli_fetch_array($qry)){
-        $id = $row['id'];
+        $id = $row['id_user'];
         $fname=$row['fname'];
         $lname =$row['lname'];
         $phone = $row['phone'];
