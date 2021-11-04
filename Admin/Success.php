@@ -8,14 +8,14 @@
 <div id="wrap">
 <div id="header">
 <div id="logo">
-    <h1 style="text-align: center;"><span style="color:green">Thông báo</span></h1>  
+    <h1 style="text-align: center;"><span style="color:green">Thông Báo</span></h1>  
 </div>
 </div>
 
 <div id="content">
     
-    <h1 style="margin-left: 5em;">Thành công</h1>
-    <h2 style="color: green">Bạn đã thêm thành công người quản trị mới, chờ đợi quản trị mới chấp nhận </h2>
+    <h1 style="margin-left: 5em;font-color:orange;">Chờ Xác Nhận</h1>
+    <h2 style="text-align: center;color:orange">Vui Lòng Chờ Xác Nhận Từ Quản Trị Viên Chính</h2>
     
 </div>
 

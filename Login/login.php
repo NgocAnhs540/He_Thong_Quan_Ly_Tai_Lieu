@@ -52,8 +52,7 @@ if (isset($_POST['submit-login'])) {
 <html>
 
 <head>
-    <title>DFS | Login</title>
-    <link rel="shortcut icon" href="../image/Address Book.png" >
+    <title>Docs | Login</title>
     <link rel="stylesheet" href="../css/login.css">
     <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
     <script>
@@ -70,7 +69,7 @@ if (isset($_POST['submit-login'])) {
     <div id="wrap">
         <div id="header">
             <div id="logo">
-                <h1 style="text-align: center;">DFS | <span style="color:green">Login</span></h1>
+                <h1 style="text-align: center;">DFS | <span style="color:green">ĐĂNG NHẬP</span></h1>
             </div>
         </div>
         <?php if (isset($_GET['status'])) : ?>
@@ -101,15 +100,15 @@ if (isset($_POST['submit-login'])) {
 
                         <tr>
                             <td style="color:#F8F8FF;">dddddddddddddddd</td>
-                            <td><input type="submit" name="submit-login" value="Login" /></td>
+                            <td><input type="submit" name="submit-login" value="Đăng Nhập" /></td>
                         </tr>
                         <tr>
                             <td style="color:#F8F8FF;">dddddddddddddddd</td>
-                            <td style="color:green;"><a href="#" onclick="getPage('forgetPassword.php')"><i>Quên mật khẩu?</i></a></td>
+                            <td style="color:red;"><a href="#" onclick="getPage('forgetPassword.php')"><i>Quên Mật Khẩu?</i></a></td>
                         </tr>
                         <tr>
                             <td style="color:#F8F8FF;">dddddddddddddddd</td>
-                            <td style="color:green;">Chưa có tài khoản?<a href="#" onclick="getPage('../User/Registation.php')"><i></br> Đăng ký.</i></a></td>
+                            <td style="color:green;">Chưa có tài khoản?<br><i> <a href="#" onclick="getPage('../User/Registation.php')">Đăng Ký</a></i></br></td>
                         </tr>
 
                     </tbody>
@@ -121,7 +120,7 @@ if (isset($_POST['submit-login'])) {
         <div class="clear"></div>
 
         <div id="footer">
-            &copy;He_thong_quan_ly_tai_lieu
+            &copy; @Nhóm 10
         </div>
     </div>
 </body>

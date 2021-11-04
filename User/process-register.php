@@ -74,7 +74,7 @@
         $mail->Subject = '[Xác thực tài khoản DFS ]';
     
         // Mail body content 
-        $mail->Body    = '<p>Xin chào<b> ' . $fname . ',</b></p>';
+        $mail->Body    = '<p>Xin chào <?php echo $username?></p>';
         $mail->Body .= '<p>Bạn đã đăng ký tài khoản thành công, để xác thực tài khoản, bạn vui lòng nhấp vào đường link dưới đây:</p>'; 
         $mail->Body .= '<a href="http://localhost:8080/DMS/User/activation.php?accout=' . $email . '&code=' . $strActivation . '">Click here</a>';
     

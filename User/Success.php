@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Docs | Thành công</title>
+<title>Docs | Thành Công</title>
 <link rel="stylesheet" href="../css/login.css">
 <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
 <script>
@@ -18,21 +18,21 @@
 <div id="wrap">
 <div id="header">
 <div id="logo">
-    <h1 style="text-align: center;">DFS | <span style="color:green">Thông báo</span></h1>  
+    <h1 style="text-align: center;background: green">DFS | <span style="color:green">Thông Báo</span></h1>  
 </div>
 </div>
 
 <div id="content">
     
-    <h1 style="margin-left: 5em;"> Thành công</h1>
-    <h2 style="color: green">Bạn đã tải lên thành công tệp của mình </h2>
+    <h1 style="text-align:center;color: green"> CHÚC MỪNG</h1>
+    <h2 style="text-align:center; color: green">Tệp Đã Được Tải Lên Thành Công </h2>
     
 </div>
 
 <div class= "clear"></div>
 
 <div id="footer">
-@He_thong_quan_ly_tai_lieu   
+@Nhóm 10   
 </div>
 </div>
 </body>

@@ -13,7 +13,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Trang chủ | Hệ thống quản lý tài liệu</title>
+        <title>Trang chủ | Hệ Thống Quản Lý Tài Liệu</title>
         <link rel="stylesheet" href="../css/index.css">
         <link rel="shortcut icon" href="../image/Address Book.png" >
         <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
@@ -31,7 +31,7 @@
         <div id="wrap-fluid">
             <div id="header">
                 <div id="logo">
-                    <h1 style="text-align: center;color: green"><span><img src="../image/Address Book.png" alt="logo" /></span>Hệ thống quản lý tài liệu</h1>  
+                    <h1 style="text-align: center;padding-top:0px; font-size: 35px; color: green"> <img src="image/Address Book.png" style="margin-bottom: -10px;" alt="logo" id="logo"/>HỆ THỐNG QUẢN LÝ TÀI LIỆU</h1>  
                 </div>
                 </div>
             <div id="menu">
@@ -62,7 +62,7 @@
             </ul>
             </div>
             <div id="side">
-            <h3>Bảng điều khiển</h3>
+            <h3>Bảng Điều Khiển</h3>
             <table style="border: 1px black solid;background-color: #607B8B;">
                 <tr>
                     <td><li><a href="#" onclick="getPage('../Upload/Upload.php')">Thêm tài liệu mới</a></li></td>

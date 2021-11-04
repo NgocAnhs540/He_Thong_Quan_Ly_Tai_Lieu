@@ -13,7 +13,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Trang chủ | Hệ thống quản lý tài liệu</title>
+        <title>Trang chủ | Hệ Thống Quản Lý Tài liệu</title>
         <link rel="stylesheet" href="../css/index.css">
         <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
         <script type="text/javascript" src="../js/Registration.js"></script>
@@ -30,7 +30,7 @@
         <div id="wrap-fluid">
             <div id="header">
                 <div id="logo">
-                    <h1 style="text-align: center;color: green;"><span><img src="../image/Address Book.png" alt="logo"/></span>Hệ thống quản lý tài liệu</h1>  
+                    <h1 style="text-align: center;color: green;font-size:35px;"><img src="../image/Address Book.png" style="margin-bottom: -10px;" alt="logo"/>HỆ THỐNG QUẢN LÝ TÀI LIỆU</h1>  
                 </div>
                 </div>
             <div id="menu">
@@ -44,7 +44,7 @@
                 </ul>
                 </li> 
                 <li><a href="../logout.php">Đăng xuất</a></li>
-                <li style="margin-top: 5px;margin-left: 60em;">Tài khoản: <?php echo $username?></li>
+                <li style="margin-top: -20px;margin-left:65em;">Tài khoản: <?php echo $username?></li>
                 </ul>
             </div>
             <div id="main">
@@ -58,7 +58,7 @@
             </ul>
             </div>
             <div id="side">
-            <h3>Bảng điều khiển</h3>
+            <h3>Bảng Điều Khiển</h3>
             <table style="border: 1px black solid;background-color: #607B8B;">
                 <tr>
                     <td><li><a href="#" onclick="getPage('../Upload/Upload.php')">Thêm tài liệu mới</a></li></td>
@@ -70,7 +70,7 @@
                     <td><li><a href="#" onclick="getPage('ViewUser.php')">Hồ sơ của tôi</a></li></td>
                 </tr>
 <!--                <tr>
-                    <td><li><a href="#" onclick="getPage('Edit.php')">Change Password</a></li></td>
+                    <td><li><a href="#" onclick="getPage('Edit.php')">Chỉnh Sửa Hồ Sơ</a></li></td>
                 </tr>-->
                 
 
@@ -83,7 +83,7 @@
             <div class= "clear"></div>
             </div>
             <div id="footer">
-            @He_thong_quan_ly_tai_lieu           </div>
+            @Nhóm 10           </div>
         </div>
     </body>
 </html>
