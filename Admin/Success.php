@@ -30,7 +30,7 @@
 </body>
 </html>
 <?php
-    $loc = "index.php";
+    $loc = "../index.php";
 					
 					echo '<script> 
 					

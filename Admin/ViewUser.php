@@ -41,8 +41,8 @@ echo $row['email'];
 echo "</td><td>";
 echo $row['type'];
 echo "
-<td><a href=\"User/delete.php?data=".$row['id']."\">delete</a></td>
-<td><a href=\"#\" onclick=\"getPage('User/Edit.php?data=".$row['id']."')\">edit</a></td></tr>";
+<td><a href=\"Admin/delete.php?data=".$row['id']."\">delete</a></td>
+<td><a href=\"#\" onclick=\"getPage('Admin/Edit.php?data=".$row['id']."')\">edit</a></td></tr>";
 }
 mysqli_close($con);
 ?>

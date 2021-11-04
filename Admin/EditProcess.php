@@ -14,7 +14,7 @@
         $insertqry = mysqli_query($con,"Update user set fname = '$fname',lname = '$lname', phone = '$phone',email = '$email', password='$password', type='$Usertype' where id = $id") or die(mysqli_error($con));
         if($insertqry)
         {
-            header('location:../index.php');
+            header('location:EditSuccess.php');
         }
     }
 ?>

@@ -16,7 +16,7 @@
 
 </script>
 <h2 style="text-align: center;">Form chỉnh sửa người dùng </h2>
-<form name="Myform" id="Myform" action="User/EditProcess.php?id='<?php echo $id;?>'" method="post" onsubmit="return(Validate());">
+<form name="Myform" id="Myform" action="Admin/EditProcess.php?id='<?php echo $id;?>'" method="post" onsubmit="return(Validate());">
    <div id="error" style="color:red; font-size:16px; font-weight:bold; padding:5px"></div>
     <table style="width:100px; margin-left: 14em;">
         <thead></thead>

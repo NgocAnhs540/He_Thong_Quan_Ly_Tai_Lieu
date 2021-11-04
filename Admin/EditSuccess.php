@@ -28,7 +28,7 @@
 </body>
 </html>
 <?php
-    $loc = "ViewUser.php";
+    $loc = "../index.php";
 					
 					echo '<script> 
 					

@@ -30,8 +30,7 @@
             
 
             if(mysqli_num_rows($result_1) >= 1){
-                $value='existed';
-                header("Location:Registation.php?response=$value");
+                echo('Đăng ký thất bại.');
             }else{
                 // 2.2 - Nếu ko tồn tại thì mới LƯU
                 // Băm mật khẩu
