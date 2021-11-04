@@ -18,21 +18,21 @@
 <div id="wrap">
 <div id="header">
 <div id="logo">
-    <h1 style="text-align: center;"><span style="color:green">Thông báo</span></h1>  
+    <h1 style="text-align: center;"><span style="color:green">Thông Báo</span></h1>  
 </div>
 </div>
 
 <div id="content">
     
-    <h1 style="margin-left: 5em;"> Thành công</h1>
-    <h2 style="color: green">Bạn đã đổi mật khẩu thành công</h2>
+    <h1 style="text-align:center; color:green "> CHÚC MỪNG</h1>
+    <h2 style="text-align: center; color: green">Bạn Đã Đổi Mật Khẩu Thành Công</h2>
     
 </div>
 
 <div class= "clear"></div>
 
 <div id="footer">
-&copy;Nguyễn Thị Ngọc Ánh 1951060540
+&copy;@Nhóm 10
 </div>
 </body>
 </html>
