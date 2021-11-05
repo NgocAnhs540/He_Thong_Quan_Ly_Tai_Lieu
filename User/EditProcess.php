@@ -8,7 +8,7 @@
         $email = htmlentities(stripslashes(mysqli_real_escape_string($con,$_POST['email'])));
         $password = htmlentities(stripslashes(mysqli_real_escape_string($con,$_POST['password'])));
         
-        $id = $_REQUEST['id'];
+        $id = $_REQUEST['id_user'];
         
         $insertqry = mysqli_query($con,"Update user set fname = '$fname',lname = '$lname', phone = '$phone',email = '$email', password='$password' where id = $id") or die(mysqli_error($con));
         if($insertqry)
