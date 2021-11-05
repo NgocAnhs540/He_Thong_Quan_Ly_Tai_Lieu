@@ -41,6 +41,7 @@
                 </div>
             <div id="menu">
                 <ul>
+                <li><a href="index.php">Trang Chủ</a>
                 <li><a href="#" onclick="getPage('Admin/Registation.php')">Thêm Quản Trị Viên</a></li>
                 <li><a href="#">Quản Lý Tài Liệu</a>
                 <ul>
@@ -51,7 +52,7 @@
                 </li> 
                 <li><a href="logout.php">Đăng Xuất</a></li>
                 
-                <li style="margin-top: -18px;margin-left:60em;">Chào mừng: <?php echo $username?></li>
+                <li style="margin-top:5px;margin-left:40em;">Chào mừng: <?php echo $username?></li>
                 
                 </ul>
             </div>

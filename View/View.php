@@ -43,7 +43,6 @@ $res = mysqli_query($con, $sql) or die(mysqli_error($con));
 			<th>Name</th>
 			<th>Size(Kb)</th>
 			<th>Times</th>
-			<th>Content</th>
 			<th>Delete</th>
 			<th>Download</th>
 		</tr>
@@ -61,7 +60,6 @@ $res = mysqli_query($con, $sql) or die(mysqli_error($con));
 			  <td>".$row['name']." </td>
 			  <td>".number_format(($row['size']/1024),2)."  </td>
 			  <td>".$row['Times']."</td>
-			  <td>".$row['content']."</td>
 			 <td><a href='View/delete.php?data=" . $row['id'] . "' class='del_doc'>delete</a></td>
 			 <td><a href='View/download.php?id=" . $row['id'] . "'>download</a></td>
 			
