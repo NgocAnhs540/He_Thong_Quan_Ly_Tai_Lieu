@@ -50,26 +50,9 @@
                 <li><a href="../logout.php">Đăng xuất</a></li>
                 <li style="margin-left:60em;padding-top:10px;">Tài khoản: <?php echo $username?></li>
                 </ul>
-<<<<<<< HEAD
                 <div id="side">
             <h3 style="margin: 25px;border:5px;">Bảng Điều Khiển</h3>
             <table style="border: 2px red;background-color: green;">
-=======
-            </div>
-            <div id="main">
-            <div id="content">
-            <h1>Chào mừng bạn đến với hệ thống quản lý tài liệu  </h1>
-            <ul style="margin-left: 5em; margin-top: 2em;">
-                <li>Upload tài liệu lên hệ thống</li>
-                <li>Download tài liệu</li>
-                <li>Chỉnh sửa tài liệu cá nhân của bạn</li>
-                <li>Chỉnh sửa thông tin người dùng</li>
-            </ul>
-            </div>
-            <div id="side">
-            <h3>Bảng Điều Khiển</h3>
-            <table style="border: 1px black solid;background-color: #607B8B;">
->>>>>>> 1bba2d42102fa95e08347ad7add420465838712b
                 <tr>
                     <td><li><a href="#" onclick="getPage('../Upload/Upload.php')">Thêm tài liệu mới</a></li></td>
                 </tr>
