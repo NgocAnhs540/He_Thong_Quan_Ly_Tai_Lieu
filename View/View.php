@@ -61,7 +61,7 @@ $res = mysqli_query($con, $sql) or die(mysqli_error($con));
 			  <td>".number_format(($row['size']/1024),2)."  </td>
 			  <td>".$row['Times']."</td>
 			 <td><a href='View/delete.php?data=" . $row['id'] . "' class='del_doc'>delete</a></td>
-			 <td><a href='View/download.php?id=" . $row['id'] . "'>download</a></td>
+			<td><a href='View/download.php?id=" . $row['id'] . "'>download</a></td>
 			
 			</tr>";
 			}

@@ -1,6 +1,5 @@
 <?php
-    include('config/connection.php');
-    include( 'Admin/AdminSession.php');
+    include_once 'AdminSession.php';
     $uname = $_SESSION['email'];
     $password = $_SESSION['password'];
     $chekUser = mysqli_query($con,"Select * from user where email= '$uname' AND password = '$password'") or die(mysqli_error($con));
@@ -15,10 +14,10 @@
 <html>
     <head>
         <title>Trang chủ | Hệ thống quản lý tài liệu</title>
-        <link rel="stylesheet" href="css/index.css">
-        <link rel="shortcut icon" href="image/Address Book.png" >
-        <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-        <script type="text/javascript" src="js/Registration.js"></script>
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="shortcut icon" href="../image/Address Book.png" >
+        <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="../js/Registration.js"></script>
         <script>
             function getPage(url){
                 $('#content').hide(1000,function(){
@@ -28,28 +27,24 @@
             }
         </script>
     </head>
-    <?php
-    include('config/connection.php');
-    if (isset($_GET['status']))  $noti = $_GET['status'] == 0 ? "Bạn đã thêm thành công, vui lòng kiểm tra email để kích hoạt tài khoản" : "Người dùng đã chấp nhận lời mời";
-    ?>
     <body>
         <div id="wrap-fluid">
             <div id="header">
                 <div id="logo">
-                    <h1 style="text-align: center;color: green"><span><img src="image/Address Book.png" alt="logo" /></span>Hệ thống quản lý tài liệu</h1>  
+                    <h1 style="text-align: center;color: green"><span><img src="../image/Address Book.png" alt="logo" /></span>Hệ thống quản lý tài liệu</h1>  
                 </div>
                 </div>
             <div id="menu">
                 <ul>
-                <li><a href="#" onclick="getPage('Admin/Registration.php')">Đăng ký</a></li>
+                <li><a href="#" onclick="getPage('../Admin/Registration.php')">Đăng ký</a></li>
                 <li><a href="#">Quản lý tài liệu</a>
                 <ul>
-                <li><a href="#" onclick="getPage('Upload/Upload.php')">Thêm một tài liệu mới</a></li>
-                <li><a href="#" onclick="getPage('View/View.php')">Xem tất cả tài liệu</a></li>
+                <li><a href="#" onclick="getPage('../Upload/Upload.php')">Thêm một tài liệu mới</a></li>
+                <li><a href="#" onclick="getPage('../View/View.php')">Xem tất cả tài liệu</a></li>
 
                 </ul>
                 </li> 
-                <li><a href="logout.php">Đăng xuất</a></li>
+                <li><a href="../logout.php">Đăng xuất</a></li>
                 
                 <li style="margin-top: 5px;margin-left:60em;">Chào mừng: <?php echo $username?></li>
                 
@@ -70,16 +65,16 @@
             <h3>Bảng điều khiển</h3>
             <table style="border: 1px black solid;background-color: #607B8B;">
                 <tr>
-                    <td><li><a href="#" onclick="getPage('Upload/Upload.php')">Thêm tài liệu mới</a></li></td>
+                    <td><li><a href="#" onclick="getPage('../Upload/Upload.php')">Thêm tài liệu mới</a></li></td>
                 </tr>
                 <tr>
-                    <td><li><a href="#" onclick="getPage('View/View.php')">Xem tài liệu</a></li></td>
+                    <td><li><a href="#" onclick="getPage('../View/View.php')">Xem tài liệu</a></li></td>
                 </tr>
                 <tr>
-                    <td><li><a href="#" onclick="getPage('Admin/Registation.php')">Thêm người dùng</a></li></td>
+                    <td><li><a href="#" onclick="getPage('../Admin/Registation.php')">Thêm người dùng</a></li></td>
                 </tr>
                 <tr>
-                    <td><li><a href="#" onclick="getPage('Admin/ViewUser.php')">Hiển thị người dùng</a></li></td>
+                    <td><li><a href="#" onclick="getPage('../Admin/ViewUser.php')">Hiển thị người dùng</a></li></td>
                 </tr>
 
             </table>

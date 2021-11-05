@@ -3,24 +3,11 @@
 <script type="text/javascript">
 
 </script>
-<h2 style="text-align: center;">Form đăng ký người dùng </h2>
-<form name="Myform" id="Myform" action="../User/process-register.php" method="post" onsubmit="return(Validate());">
+<h2 style="text-align: center;">Thêm người quản trị </h2>
+<form name="Myform" id="Myform" action="Admin/RegisterProcess.php" method="post" onsubmit="return(Validate());">
    <div id="error" style="color:red; font-size:16px; font-weight:bold; padding:5px"></div>
-    <table style="width:100px;">
+    <table style="width:100px; margin-left: 14em;">
         <thead></thead>
-        <?php
-                    if(isset($_GET['response'])){
-                      if($_GET['response'] == 'successfully'){
-                        echo "<p class='text-danger'>Bạn đã đăng kí thành công</p>";
-                        
-                      }
-
-                      if($_GET['response'] == 'existed'){
-                        echo "<p class='text-danger'>Email đã tồn tại</p>";
-                      }
-                    }
-
-                ?>
         <tbody>
             <tr>
                 <td>Tên</td>
@@ -46,24 +33,16 @@
                 <td>Nhập lại mật khẩu</td>
                 <td><input type="password" name="pass2" id="pass2" onkeydown="HideError()"/></td>
             </tr>
-            <tr>
                 <td>Kiểu người dùng</td>
                 <td>
                     <select name="usertype" id="usertype" onkeydown="HideError()">
-                     
-                        <option value="user">Bình thường</option>
-
+                        <option value="Admin" >Quản trị</option>
                     </select>
                 </td>
             </tr>
             <tr>
                 <td style="color:#F8F8FF;">dddddddddddddddd</td>
-                <td><input type="submit" name="submit-reg" value="Thêm" /></td>
-            </tr>
-            <tr>
-                <td style="color:#F8F8FF;">dddddddddddddddd</td>
-                <td style="color:green;"><a href="login.php">
-                            << Quay lại</a></td>
+                <td><input type="submit" name="submit" value="Thêm" /></td>
             </tr>
         
         </tbody>
