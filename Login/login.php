@@ -3,9 +3,7 @@
 include('../config/connection.php');
 
 session_start();
-
-$email = $password  = null;
-$errors = array('all' => '');
+ob_start();
 $noti = "";
 if (isset($_SESSION['email'])) header("Location: login.php");
 if (isset($_GET['status']))  $noti = $_GET['status'] == 0 ? "Đăng ký thành công, vui lòng kiểm tra email để kích hoạt tài khoản" : "Kích hoạt tài khoản thành công";
@@ -14,33 +12,35 @@ if (isset($_POST['submit-login'])) {
     $email = $_POST['uname'];
     $password = $_POST['password'];
 
-    $query = "SELECT * From user where email = '$email'";
+    $query = "SELECT * From user where email = '$email' AND password = '$password'";
     $res = mysqli_query($con, $query);
     $row = mysqli_num_rows($res);
     if ($row > 0) {
         $user_logged = mysqli_fetch_assoc($res);
         if ($user_logged['status'] == 0) {
             $errors['all'] = "Tài khoản chưa được kích hoạt";
-        } else {
+        } elseif($row==1) {
+        
 
-                   
-                   $_SESSION['email'] = $user_logged['email'];
-                   $_SESSION['password'] = $user_logged['password'];
-                   $_SESSION['type'] = $user_logged['type'];
+               
+                $_SESSION['email'] = $user_logged ['email'];
+                $_SESSION['password'] =$user_logged ['password'];
+                $_SESSION['type'] = $user_logged ['type'];
                    
                    if($_SESSION['type'] == 'Admin'){
                        header('location:../index.php'); 
-                   }
-                   elseif ($_SESSION['type'] == 'user') {
+                   }elseif ($_SESSION['type'] == 'user') {
                        header('location:../User/index.php');
                
-            }
+                    }
          
-          else {
-                header('location:ErrorMesage.php');
-            }
+          
     
-        }
+        
+    }
+    }
+    else {
+        header('location:ErrorMesage.php');
     }
 }
 
@@ -79,11 +79,12 @@ if (isset($_POST['submit-login'])) {
                                             <?php echo $noti ?>
                                         </div>
                                     <?php endif; ?>
-                                    <?php if (isset($_POST['submit-login'])) : ?>
-                                            <div class="alert alert-danger text-center" role="alert">
-                                                <?php echo $errors['all'] ?>
-                                            </div>
-                                        <?php endif; ?>
+
+        <?php if (isset($_POST['submit-login'])) : ?>
+                <div class="alert alert-danger text-center" role="alert">
+                    <?php echo $errors['all'] ?>
+                </div>
+            <?php endif; ?>
 
         <div id="content">
             <form name="Myform" id="Myform" action="" method="post" onsubmit="return(Validate());">
