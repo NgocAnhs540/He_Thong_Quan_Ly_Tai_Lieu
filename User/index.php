@@ -60,7 +60,7 @@
                     <td><li><a href="#" onclick="getPage('../Upload/Upload.php')">Thêm tài liệu mới</a></li></td>
                 </tr>
                 <tr>
-                    <td><li><a href="#" onclick="getPage('../View/View.php')">Xem tài liệu</a></li></td>
+                    <td><li><a href="#" onclick="getPage('../View/ViewUser.php')">Xem tài liệu</a></li></td>
                 </tr>
                 <tr>
                     <td><li><a href="#" onclick="getPage('ViewUser.php')">Hồ sơ của tôi</a></li></td>
