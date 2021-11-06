@@ -35,10 +35,10 @@
             }else{
                 // 2.2 - Nếu ko tồn tại thì mới LƯU
                 // Băm mật khẩu
-                $pass_hash = password_hash($pass1,PASSWORD_DEFAULT);
+                
                 $strRandom = rand(1000,9999);
                 $strActivation = md5($strRandom);
-                $sql = "INSERT INTO user(fname,lname,phone, email, password,type,activation) VALUES ('$first_name','$last_name','$phone','$email','$pass_hash','$type','$strActivation')";
+                $sql = "INSERT INTO user(fname,lname,phone, email, password,type,activation) VALUES ('$first_name','$last_name','$phone','$email','$pass1','$type','$strActivation')";
                 $result= mysqli_query($con,$sql);
                 
 
