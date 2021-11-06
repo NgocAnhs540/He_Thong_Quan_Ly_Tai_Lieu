@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Docs | Đăng nhập </title>
+<title>Docs |Lỗi Đăng Nhập </title>
 <link rel="stylesheet" href="../css/login.css">
 <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
 <script>
@@ -18,21 +18,21 @@
 <div id="wrap">
 <div id="header">
 <div id="logo">
-    <h1 style="text-align: center;"><span style="color:green">Thông báo : Lỗi</span></h1>  
+    <h1 style="text-align: center;"><span style="color:red">Thông Báo : Lỗi</span></h1>  
 </div>
 </div>
 
 <div id="content">
     
-    <h1 style="margin-left: 5em;"> Lỗi </h1>
-    <h2 style="color: red">Tên đăng nhập hoặc mật khẩu sai</h2>
+    <h1 style="text-align:center; color:red">LỖI ĐĂNG NHẬP</h1>
+    <h2 style="text-align:center; color: black">Vui Lòng Kiểm Tra Lại Tài Khoản Hoặc Mật Khẩu</h2>
     
 </div>
 
 <div class= "clear"></div>
 
 <div id="footer">
-&copy;Nhóm 10
+@Nhóm 10
 </div>
 </div>
 </body>

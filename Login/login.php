@@ -31,12 +31,7 @@ if (isset($_POST['submit-login'])) {
                        header('location:../index.php'); 
                    }elseif ($_SESSION['type'] == 'user') {
                        header('location:../User/index.php');
-               
-                    }
-         
-          
-    
-        
+                    }    
     }
     }
     else {
@@ -56,6 +51,9 @@ if (isset($_POST['submit-login'])) {
 <head>
     <title>Docs | Login</title>
     <link rel="stylesheet" href="../css/login.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://fontawesome.com/v4.7/icons/">
     <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
     <script>
         function getPage(url) {
@@ -93,11 +91,11 @@ if (isset($_POST['submit-login'])) {
                     <thead></thead>
                     <tbody>
                         <tr>
-                            <td style="text-align: right;font-size: 20px">Email:  </td>
+                            <td style="text-align: right;font-size: 20px"><i class="fas fa-user-circle"></i>Email:  </td>
                             <td style="font-size: 20px"><input type="text" name="uname" id="fname" onkeydown="HideError()" size="20px;" /></td>
                         </tr>
                         <tr>
-                            <td style="text-align: right;font-size: 20px">Mật khẩu: </td>
+                            <td style="text-align: right;font-size: 20px"><i class="fas fa-lock"></i>Mật khẩu: </td>
                             <td style="font-size: 20px"><input type="password" name="password" id="password" onkeydown="HideError()" size="20px;" /></td>
                         </tr>
 
@@ -123,7 +121,7 @@ if (isset($_POST['submit-login'])) {
         <div class="clear"></div>
 
         <div id="footer">
-            &copy; Nhóm 10
+        @Nhóm 10
         </div>
     </div>
 </body>
